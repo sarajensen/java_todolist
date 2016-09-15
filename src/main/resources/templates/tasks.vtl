@@ -1,0 +1,13 @@
+<h1>Task list!</h1>
+
+#if ($HTMLTasks)
+  <ul>
+    #foreach ($HTMLTask in $HTMLTasks)
+      <li><a href="/tasks/$HTMLTask.getId()">$task.getDescription()</a></li>
+    #end
+  </ul>
+#else
+  <p>No tasks!</p>
+#end
+
+<a href="/tasks/new">Add New Task</a>
