@@ -1,9 +1,9 @@
 <h1>Task list!</h1>
 
-#if ($HTMLTasks)
+#if ($tasks)
   <ul>
-    #foreach ($HTMLTask in $HTMLTasks)
-      <li><a href="/tasks/$HTMLTask.getId()">$task.getDescription()</a></li>
+    #foreach ($task in $tasks)
+      <li><a href="/tasks/$task.getId()">$task.getDescriptionOfTask()</a></li>
     #end
   </ul>
 #else
